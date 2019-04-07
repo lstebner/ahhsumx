@@ -25,8 +25,7 @@ directory explanation:
 
 ## for deployment
 
-1. `yarn build`
+1. `yarn build_prod`
 2. upload `build` directory to webserver
-
 
 
