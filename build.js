@@ -3,6 +3,7 @@ const fs = require("fs")
 const path = require("path")
 
 const SRC_DIR = path.resolve(__dirname, "src")
+const BUILD_DIR = path.resolve(__dirname, "build")
 const TEMPLATE_EXT = ".pug"
 
 const QUIET = false
@@ -34,6 +35,10 @@ function render_view(src_path, dest_path) {
 
 function render_all_views() {
   let src_file, dest_file
+
+  if (!fs.existsSync(BUILD_DIR)) {
+    fs.mkdirSync(BUILD_DIR)
+  }
 
   for (const i in views_to_render) {
     src_file = views_to_render[i][1]
