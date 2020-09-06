@@ -13,7 +13,10 @@
   },
   "scripts": {
     "build": "node build.js",
-    "build_prod": "NODE_ENV=production node build.js"
+    "build_prod": "NODE_ENV=production node build.js",
+    "test": "jest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
